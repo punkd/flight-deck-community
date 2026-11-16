@@ -35,7 +35,7 @@ jobs:
           docker build --label "org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}" --tag "$image:$GITHUB_SHA" .
           docker run --detach --name flight-deck-smoke --publish 127.0.0.1:8080:8080 "$image:$GITHUB_SHA"
           trap 'docker rm -f flight-deck-smoke >/dev/null 2>&1 || true' EXIT
-          if ! curl --fail --silent --show-error --retry 15 --retry-connrefused --retry-delay 1 http://localhost:8080/healthz; then
+          if ! curl --fail --silent --show-error --retry 15 --retry-all-errors --retry-connrefused --retry-delay 1 http://localhost:8080/healthz; then
             docker logs flight-deck-smoke
             exit 1
           fi
