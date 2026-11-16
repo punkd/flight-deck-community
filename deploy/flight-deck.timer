@@ -1,0 +1,10 @@
+[Unit]
+Description=Check for new DevOps Flight Deck releases
+
+[Timer]
+OnBootSec=1min
+OnUnitInactiveSec=2min
+Unit=flight-deck.service
+
+[Install]
+WantedBy=timers.target

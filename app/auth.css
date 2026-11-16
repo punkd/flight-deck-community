@@ -1,0 +1,13 @@
+.auth-page{min-height:100dvh;display:grid;place-items:center}
+.auth-shell{width:min(830px,100%);display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 14px 50px #2536561a}
+.auth-cover{padding:40px 28px;background:radial-gradient(at 100% 95%,#374c72 0%,#1b2a45 48%,#151f33 100%);color:white;display:flex;flex-direction:column;justify-content:center;min-height:415px}
+.auth-cover .hero-kicker{margin:25px 0 10px}
+.auth-cover h1{font-size:clamp(31px,4.3vw,49px);line-height:1.03}
+.auth-cover p:last-child{margin-top:14px;color:#ccd7e9}
+.auth-form{padding:28px;align-self:center}
+.auth-form header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:13px}
+.auth-form .segments{margin-bottom:14px}
+.auth-form .segments button{padding:6px 9px}
+.auth-form .fine{margin-top:0;font-weight:500}
+.auth-notice{margin:8px}
+@media(max-width:650px){.auth-shell{grid-template-columns:1fr}.auth-cover{min-height:auto;padding:20px}.auth-cover .hero-kicker{margin-top:15px}.auth-form{padding:19px}.auth-page{align-items:start}}

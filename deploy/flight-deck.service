@@ -1,0 +1,8 @@
+[Unit]
+Description=Pull, verify and deploy DevOps Flight Deck
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/flight-deck/deploy.env
+ExecStart=%h/flight-deck/deploy/update.sh
+TimeoutStartSec=5min
